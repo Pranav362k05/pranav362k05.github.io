@@ -1,0 +1,552 @@
+/*-----------------------------------*\
+  #main.css
+\*-----------------------------------*/
+
+/**
+ * TABLE OF CONTENT
+ *
+ * COMPONENTS
+ * Btn............................Buttons style
+ * Slider.........................Slider style
+ * Card...........................Cards style
+ *
+ * MAIN CONTENT
+ * Header.........................see require.css (#HEADER)
+ * Hero...........................Hero styles
+ * Client.........................Client style
+ * About..........................About style
+ * Skills.........................Skills style
+ * Cta............................Cta style
+ * Testimonials...................Testimonials style
+ * Media queries..................Responsive for all devices
+ */
+
+/*-----------------------------------*\
+  #COMPONENTS
+\*-----------------------------------*/
+
+@import url("./components/btn.css");
+@import url("./components/slider.css");
+@import url("./components/card.css");
+
+
+/*-----------------------------------*\
+  #HERO
+\*-----------------------------------*/
+
+.hero {
+  position: relative;
+  background-color: transparent;
+  padding-block-start: calc(var(--section-padding) + 60px);
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 10%;
+  bottom: 70%;
+  right: -75%;
+  background-color: transparent;
+  transform: rotate(-45deg);
+  border-radius: var(--radius-50);
+  z-index: -1;
+}
+
+.hero .container {
+  display: grid;
+  gap: 70px;
+}
+
+.hero-subtitle {
+  color: var(--jet);
+  text-transform: uppercase;
+  font-weight: var(--fw-600);
+  letter-spacing: 3px;
+  margin-block-end: 20px;
+}
+
+.hero-text {
+  margin-block: 25px;
+}
+
+.hero .btn {
+  margin-inline: auto;
+}
+
+.hero-banner {
+  max-width: max-content;
+  margin-inline: auto;
+}
+
+
+/*-----------------------------------*\
+  #CLIENT
+\*-----------------------------------*/
+
+.client {
+  background-color: transparent;
+  padding-block: 30px;
+}
+
+.client .slider-item {
+  min-width: calc(50% - 15px);
+}
+
+.client .slider::-webkit-scrollbar {
+  display: none;
+}
+
+
+/*-----------------------------------*\
+  #ABOUT
+\*-----------------------------------*/
+
+.about .container {
+  display: grid;
+  gap: 50px;
+}
+
+.about .section-text {
+  margin-block: 25px 16px;
+}
+
+.about-list {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.about-list .list-text {
+  color: var(--jet);
+  font-weight: var(--fw-500);
+}
+
+.about-list .strong {
+  color: var(--orange-red);
+  display: block;
+}
+
+.about .wrapper {
+  margin-block-start: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px 25px;
+}
+
+
+/*-----------------------------------*\
+  #SKILLS (Apple-style Premium UI)
+\*-----------------------------------*/
+
+.skill {
+  padding-block-end: 0;
+}
+
+.skill .container {
+  gap: 50px;
+  max-width: 1200px;
+}
+
+.skill-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.skill-list li {
+  height: 100%;
+}
+
+.skill .card-sm {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 32px;
+  text-align: left;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 18px;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  overflow: hidden;
+  height: 100%;
+}
+
+/* Category Glow Colors & Accents */
+.skill .card-sm.programming { --glow-clr: hsla(210, 100%, 65%, 0.15); --accent-clr: hsl(210, 100%, 65%); }
+.skill .card-sm.web-dev { --glow-clr: hsla(41, 99%, 64%, 0.15); --accent-clr: hsl(41, 99%, 64%); }
+.skill .card-sm.tools { --glow-clr: hsla(142, 70%, 50%, 0.15); --accent-clr: hsl(142, 70%, 50%); }
+.skill .card-sm.systems { --glow-clr: hsla(270, 70%, 60%, 0.15); --accent-clr: hsl(270, 70%, 60%); }
+
+.skill .card-sm:hover {
+  transform: translateY(-8px);
+  background-color: rgba(255, 255, 255, 0.07);
+  border-color: var(--accent-clr);
+  box-shadow: 0 20px 40px -20px var(--glow-clr);
+}
+
+.skill .card-media {
+  width: 56px !important;
+  height: 56px !important;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  font-size: 3rem;
+  color: var(--accent-clr);
+  padding: 0;
+  display: grid;
+  place-items: center;
+}
+
+.skill .card-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.skill .card-description {
+  font-size: 1.4rem;
+  color: #ffffff;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.skill .skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block-start: auto;
+  padding-block-start: 10px;
+}
+
+.skill .tag {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 5px 14px;
+  border-radius: 100px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.skill .card-sm:hover .tag {
+  border-color: var(--accent-clr);
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Decorative Glow Bar (Apple-style highlight) */
+.skill .progress-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--accent-clr), transparent);
+  opacity: 0.2;
+  transition: 0.4s ease;
+}
+
+.skill .card-sm:hover .progress-glow {
+  opacity: 0.8;
+  height: 5px;
+}
+
+.skill .container {
+  gap: 50px;
+}
+
+.skill-list {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.skill .card ion-icon {
+  font-size: 3rem;
+}
+
+.skill .card .card-title {
+  color: var(--jet);
+  font-size: 1.6rem;
+  font-weight: var(--fw-500);
+}
+
+/*-----------------------------------*\
+  #PROJECT GRID FIX (ADD THIS)
+\*-----------------------------------*/
+
+/* FIX uneven spacing without changing layout */
+
+.service-list {
+  align-items: flex-start;
+}
+
+.card-container {
+  margin-bottom: 0;
+  /* remove any extra spacing */
+}
+
+.service-list>li {
+  display: flex;
+}
+
+.card {
+  height: auto;
+}
+
+/*-----------------------------------*\
+  #CTA
+\*-----------------------------------*/
+
+.cta {
+  background-color: transparent;
+  text-align: center;
+  padding-block: 46px 50px;
+}
+
+.cta .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.cta .title-lg {
+  color: var(--jet);
+  font-weight: var(--fw-500);
+}
+
+
+/*-----------------------------------*\
+  #TESTIMONIALS
+\*-----------------------------------*/
+
+.testi .slider-item {
+  min-width: 100%;
+  scroll-margin-inline-start: 16px;
+}
+
+.testi .card {
+  position: relative;
+  z-index: 1;
+}
+
+.testi .card::after {
+  content: url("../images/quote-left.svg");
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+}
+
+.testi .client-name {
+  margin-block-start: 15px;
+  color: var(--jet);
+  font-weight: var(--fw-600);
+}
+
+.testi .client-title {
+  font-size: var(--fs-14);
+}
+
+.testi .slider {
+  margin-inline: -16px;
+  padding-inline: 16px;
+  padding-block-end: 35px;
+}
+
+.testi .slider::-webkit-scrollbar {
+  height: 12px;
+}
+
+.testi .slider::-webkit-scrollbar-track {
+  border: 1px solid var(--jet);
+  border-radius: var(--radius-pill);
+}
+
+.testi .slider::-webkit-scrollbar-thumb {
+  background-color: var(--jet);
+  border-radius: var(--radius-pill);
+}
+
+.testi .slider::-webkit-scrollbar-button {
+  width: calc(25% - 20px);
+}
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media (min-width: 575px) {
+
+  .client .slider-item {
+    min-width: calc(33.33% - 20px);
+  }
+
+  .client .slider-item .w-100,
+  .about-banner,
+  .skill-banner {
+    max-width: max-content;
+    margin-inline: auto;
+  }
+
+  .cta .container {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .hero-text {
+    --fs-18: 2rem;
+  }
+
+  .hero::after {
+    top: -20%;
+    bottom: 50%;
+    left: 48%;
+    right: -15%;
+  }
+
+  .client .slider-item {
+    min-width: calc(25% - 22.5px);
+  }
+
+  .testi .slider-item {
+    min-width: calc(50% - 15px);
+  }
+}
+
+@media (min-width: 992px) {
+
+  :is(.hero, .about, .skill) .container {
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  .hero {
+    text-align: left;
+  }
+
+  .hero .btn {
+    margin-inline: 0;
+  }
+
+  .client .slider-item {
+    min-width: calc(20% - 24px);
+  }
+
+  .skill .container {
+    align-items: center;
+  }
+
+  .skill-banner {
+    margin-block-start: -20px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  .about-list {
+    gap: 40px;
+  }
+}
+
+
+/*-----------------------------------*\
+  #GLOBAL CINEMATIC FIX (SAFE)
+\*-----------------------------------*/
+
+/* Base dark cinematic background */
+body {
+  background-color: #0b0e14 !important;
+  color: #ffffff;
+}
+
+/* Ensure video is always behind */
+#bg-video {
+  z-index: -1 !important;
+}
+
+/* Kill accidental solid section backgrounds */
+section,
+main {
+  background: transparent !important;
+}
+
+html,
+body {
+  background-color: #f6e7c1 !important;
+}
+
+/* kill white panels everywhere */
+section,
+main,
+div {
+  background-color: transparent;
+}
+
+/* any hidden “surface system” (VERY IMPORTANT for your template) */
+.surface,
+[class*="surface"],
+[class*="bg"],
+.card,
+.hero,
+.client,
+.cta,
+.footer {
+  background-color: transparent !important;
+}
+
+
+/*-----------------------------------*\
+  #HEADER ACTIONS
+\*-----------------------------------*/
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-btn {
+  display: grid;
+  place-content: center;
+  width: 38px;
+  height: 38px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: all 0.3s var(--transition-1);
+}
+
+.social-btn img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.social-btn:is(:hover, :focus-visible) {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--accent-clr, var(--orange-red));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 400px) {
+  .header-actions .social-btn {
+    display: none;
+  }
+}

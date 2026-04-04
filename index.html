@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Pranav Krishna</title>
+  <meta name="title" content="Pranav Krishna">
+  <meta name="description" content="This is a personal portfolio">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/require.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/pages/service.css">
+  <link rel="stylesheet" href="./assets/css/pages/portfolio.css">
+  <link rel="stylesheet" href="./assets/css/pages/contact.css?v=2">
+  <link rel="stylesheet" href="./assets/css/surfaces.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" href="assets/images/hero-banner.png" as="image">
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: transparent !important;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -100;
+    }
+  </style>
+</head>
+
+<body>
+
+  <video autoplay loop muted playsinline id="bg-video">
+    <source src="./assets/webpage%20gif.mp4" type="video/mp4">
+  </video>
+
+  <!-- 
+    - #PRELOADER
+  -->
+
+  <div class="preloader" data-preloader>
+    <div class="preloader-circle"></div>
+  </div>
+
+
+
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+        <img src="./assets/images/logo.svg" width="151" height="28" alt="Pranav Krishna home">
+      </a>
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#" class="label-lg navbar-link has-after active">Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#about-me" class="label-lg navbar-link has-after">About Me</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#projects" class="label-lg navbar-link has-after">Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#skill" class="label-lg navbar-link has-after">Skills</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#portfolio" class="label-lg navbar-link has-after">Certifications</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#contact" class="label-lg navbar-link has-after">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="https://github.com/Pranav362k05/" target="_blank" rel="noopener noreferrer" class="social-btn"
+          aria-label="GitHub">
+          <img src="./assets/images/github_919847.png" width="24" height="24" alt="GitHub Logo">
+        </a>
+        <a href="https://www.linkedin.com/in/pranav-krishna-y-93a910288/" target="_blank" rel="noopener noreferrer"
+          class="social-btn" aria-label="LinkedIn">
+          <img src="./assets/images/linkedin_3991775.png" width="24" height="24" alt="LinkedIn Logo">
+        </a>
+        <a href="#contact" class="btn btn-primary">Contact</a>
+      </div>
+
+      <button class="nav-toggle-btn" aria-label="menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
+    </div>
+  </header>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="section hero" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content" data-aos="fade-right" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
+
+            <p class="hero-subtitle">hi, This is</p>
+
+            <h1 class="headline-lg">Pranav Krishna</h1>
+
+            <p class="hero-text body-md">
+              I'm a CS student from SRM University.
+            </p>
+
+            <a href="#about-me" class="btn btn-primary">Let's Start</a>
+
+          </div>
+
+          <figure class="hero-banner" data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="200">
+            <img src="./assets/images/hero-banner.png" width="680" height="645" alt="Pranav Krishna,hero-banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section id="about-me" class="section about" aria-label="about me">
+        <div class="container">
+
+          <figure class="about-banner" data-aos="fade-right" data-aos-duration="1200">
+            <img src="./assets/images/about-banner.png" width="100" height="100" loading="lazy"
+              alt="Pranav Krishna about-banner" class="w-100">
+          </figure>
+
+          <div class="about-content" data-aos="fade-left" data-aos-duration="1200">
+
+            <h2 class="title-lg">I’m a 3rd year Computer Science Student focused on software development.</h2>
+
+            <p class="body-md section-text">
+              An undergraduate based in Chennai, India, with a strong interest in software
+              development. I build responsive and user-friendly web interfaces while continuously improving my skills in
+              programming and problem-solving.
+            </p>
+
+            <div class="wrapper">
+              <a href="#projects" class="btn btn-primary">Projects</a>
+
+              <a href="#skill" class="btn btn-secondary">Skills</a>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #Projects
+      -->
+
+      <section id="projects" class="section project has-bg-image" aria-labelledby="service-label"
+        style="background-image: url('./assets/images/service-bg.png')">
+        <div class="container">
+
+          <h2 class="section-title headline-md text-center" id="project-label">My Projects</h2>
+
+          <ul class="service-list" data-aos="fade-up" data-aos-duration="1200">
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(177, 39%, 72%)">
+
+                <div class="card-media">
+                  <ion-icon name="phone-portrait-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Bank Management System</h3>
+
+                  <p class="body-sm">
+                    Developed a Bank Management System using Java, Swing, MySQL, and JDBC, implementing features like
+                    deposits, withdrawals, and balance tracking while designing an intuitive GUI and ensuring robust
+                    database integration with proper error handling.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(41, 99%, 64%)">
+
+                <div class="card-media">
+                  <ion-icon name="laptop-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Credit Card Fraud Detection</h3>
+
+                  <p class="body-sm">
+                    Developed a Credit Card Fraud Detection system using Python, leveraging Pandas, NumPy, and
+                    Scikit-learn to analyze transaction patterns, compare multiple ML algorithms, and optimize
+                    performance using precision, recall, and F1-score.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(19, 97%, 85%)">
+
+                <div class="card-media">
+                  <ion-icon name="stats-chart-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Dental Clinic Management System</h3>
+
+                  <p class="body-sm">
+                    Developed a Dental Clinic Management System using PHP, MySQL, and XAMPP, implementing CRUD
+                    operations for patients, appointments, billing, and treatments with optimized database design using
+                    foreign keys, triggers, views, and constraints.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(221, 100%, 79%)">
+
+                <div class="card-media">
+                  <ion-icon name="shapes-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Fitness Monitor</h3>
+
+                  <p class="body-sm">
+                    Developed a Fitness Monitor web application using HTML, CSS, and JavaScript, featuring a BMI
+                    calculator and personalized workout plans, with responsive UI design and prototyping in Figma.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="card-container">
+              <div class="card card-md" style="background-color: hsl(76, 39%, 72%)">
+
+                <div class="card-media">
+                  <ion-icon name="code-slash-outline" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="card-title title-sm">Analyzing Psychological Factors Influencing Placebo Response Using
+                    Machine Learning</h3>
+
+                  <p class="body-sm">
+                    Developed a machine learning-based system using Python, pandas, and scikit-learn to predict placebo
+                    responsiveness from psychological traits such as stress, anxiety, and personality factors,
+                    implementing models like Logistic Regression, Random Forest, and SVM while providing probability
+                    predictions and interpretable feature importance insights.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <!-- 
+        - #SKILL
+      -->
+
+      <section id="skill" class="section skill" aria-labelledby="skill-label">
+        <div class="container">
+
+          <div class="skill-content" data-aos="fade-right" data-aos-duration="1200">
+
+            <h2 class="section-title headline-md" id="skill-label">My Skills</h2>
+
+            <ul class="skill-list">
+
+              <li>
+                <div class="card card-sm programming" data-aos="fade-up" data-aos-duration="1000">
+                  <div class="progress-glow"></div>
+                  <div class="card-media">
+                    <ion-icon name="code-slash-outline"></ion-icon>
+                  </div>
+                  <h3 class="card-title">Programming</h3>
+                  <p class="card-description">Building strong foundations in problem-solving and software architecture.
+                  </p>
+                  <div class="skill-tags">
+                    <span class="tag">C</span>
+                    <span class="tag">C++</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Python</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card card-sm web-dev" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                  <div class="progress-glow"></div>
+                  <div class="card-media">
+                    <ion-icon name="globe-outline"></ion-icon>
+                  </div>
+                  <h3 class="card-title">Web Development</h3>
+                  <p class="card-description">Crafting immersive, responsive, and high-performance web applications.</p>
+                  <div class="skill-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">React</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Django</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card card-sm tools" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                  <div class="progress-glow"></div>
+                  <div class="card-media">
+                    <ion-icon name="construct-outline"></ion-icon>
+                  </div>
+                  <h3 class="card-title">DevOps & Tools</h3>
+                  <p class="card-description">Streamlining development workflows and managing scalable infrastructure.
+                  </p>
+                  <div class="skill-tags">
+                    <span class="tag">Git</span>
+                    <span class="tag">Docker</span>
+                    <span class="tag">AWS</span>
+                    <span class="tag">Linux</span>
+                  </div>
+                </div>
+              </li>
+
+              <li>
+                <div class="card card-sm systems" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                  <div class="progress-glow"></div>
+                  <div class="card-media">
+                    <ion-icon name="terminal-outline"></ion-icon>
+                  </div>
+                  <h3 class="card-title">System administration</h3>
+                  <p class="card-description">Expertise in managing and securing enterprise-level computing systems.</p>
+                  <div class="skill-tags">
+                    <span class="tag">RedHat</span>
+                    <span class="tag">Networking</span>
+                    <span class="tag">Linux</span>
+                    <span class="tag">Shell Scripting</span>
+                    <span class="tag">Bash</span>
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <figure class="skill-banner" data-aos="fade-left" data-aos-duration="1200">
+            <img src="./assets/images/skill-banner.png" width="681" height="757" loading="lazy"
+              alt="Pranav Krishna skill-banner" class="w-100">
+          </figure>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #Certifications
+      -->
+
+      <section id="portfolio" class="section portfolio" aria-labelledby="portfolio-label">
+        <div class="container">
+
+          <h2 class="section-title headline-md text-center" id="portfolio-label">Certifications</h2>
+
+          <ul class="portfolio-list" data-aos="zoom-in-up" data-aos-duration="1200">
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/Certifications-1.jpg" width="800" height="540" loading="lazy"
+                    alt="RHCSA Certficate" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Linux systems</span>
+
+                  <h3 class="title-md">RedHat Certified System Administrator</h3>
+
+                  <p class="card-text">
+                    Gained hands-on expertise in Linux system administration, including user management, file systems,
+                    process control, and server configuration using Red Hat Enterprise Linux.
+                  </p>
+
+                  <a href="https://rhtapps.redhat.com/verify?certId=260-021-126" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-primary">View Credential</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/Certifications-2.jpg" width="800" height="540" loading="lazy"
+                    alt="Networking Basics Certifications-2" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Computer Networking</span>
+
+                  <h3 class="title-md">Networking Basics ─ Cisco Networking Academy</h3>
+
+                  <p class="card-text">
+                    Learned core networking concepts such as IP addressing, network protocols, routing, switching, and
+                    troubleshooting fundamentals for building and managing networks.
+                  </p>
+
+                  <a href="https://www.credly.com/badges/d9ff8ce7-3921-4c1a-b8d1-cdc1c49f5d0e" target="_blank"
+                    rel="noopener noreferrer" class="btn btn-primary">View Credential</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/Certifications-3.jpg" width="800" height="540" loading="lazy"
+                    alt="Certifications-3" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Python Programming</span>
+
+                  <h3 class="title-md">Crash Course on Python ─ Google</h3>
+
+                  <p class="card-text">
+                    Developed strong foundations in Python programming, including data structures, scripting,
+                    automation, and writing efficient, readable code.
+                  </p>
+
+                  <a href="https://www.coursera.org/account/accomplishments/verify/LGDBXUD6LFBP"
+                    class="btn btn-primary">view credential</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/Certifications-4.jpg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Machine Learning</span>
+
+                  <h3 class="title-md"> Introduction to Machine Learning ─ NPTEL</h3>
+
+                  <p class="card-text">
+                    Acquired knowledge of machine learning concepts such as supervised and unsupervised learning, model
+                    evaluation, and basic algorithms used for data-driven decision making.
+                  </p>
+
+                  <a href="https://archive.nptel.ac.in/content/noc/NOC25/SEM2/Ecertificates/106/noc25-cs149/Course/NPTEL25CS149S23320158209185670.pdf"
+                    class="btn btn-primary">view credential</a>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="portfolio-card">
+
+                <div class="card-banner img-holder" style="--width: 800; --height: 540;">
+                  <img src="./assets/images/Certifications-5.jpg" width="800" height="540" loading="lazy"
+                    alt="Website Design for Marketing Agency Startup" class="img-cover">
+
+                  <a href="#" class="btn-icon" aria-label="More about Website Design for Marketing Agency Startup">
+                    <ion-icon name="arrow-forward-sharp" aria-hidden="true"></ion-icon>
+                  </a>
+                </div>
+
+                <div class="card-content">
+
+                  <span class="chip label-md">Java Programming</span>
+
+                  <h3 class="title-md">Programming in Java ─ NPTEL</h3>
+
+                  <p class="card-text">
+                    Learned object-oriented programming principles in Java, including classes, inheritance, exception
+                    handling, and building robust applications.
+                  </p>
+
+                  <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs105/Course/NPTEL24CS105S15250069204219289.pdf"
+                    class="btn btn-primary">view credential</a>
+
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+
+
+      <!-- 
+        - #CTA
+      -->
+
+      <section class="cta" data-aos="zoom-in" data-aos-duration="1500">
+        <div class="container">
+          <h1 class="title-lg" id="contact-label" style="margin-block-end: 40px;">Get in touch</h1>
+
+          <a href="#contact" class="btn btn-tertiary">Contact Now</a>
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <!-- 
+        - #CONTACT
+      -->
+
+      <section id="contact" class="section contact has-bg-image" aria-labelledby="contact-label"
+        style="background-image: url('./assets/images/contact-bg.png')">
+        <div class="container">
+
+          <div class="contact-content" data-aos="fade-up" data-aos-duration="1200">
+
+            <p class="body-lg"
+              style="margin-block-end: 50px; max-width: 84ch; text-align: center; margin-inline: auto; font-size: 1.8rem; line-height: 1.6;">
+              Thanks for visiting my portfolio. I appreciate you taking the time to look through my projects and skills.
+              If you have any questions or just want to connect, feel free to reach out. I hope you found my work
+              interesting and useful.
+            </p>
+
+            <ul class="contact-list">
+
+              <li class="contact-item">
+                <a href="tel:+917305711669" class="contact-link">
+                  <div class="item-icon" style="background-color: hsl(177, 39%, 72%)">
+                    <ion-icon name="call" aria-hidden="true"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="label-lg">Phone</p>
+                    <span class="body-lg">+91 7305711669</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="contact-item">
+                <a href="mailto:pky20052023@gmail.com" class="contact-link">
+                  <div class="item-icon" style="background-color: hsl(41, 99%, 64%)">
+                    <ion-icon name="mail" aria-hidden="true"></ion-icon>
+                  </div>
+                  <div>
+                    <p class="label-lg">Mail</p>
+                    <span class="body-lg">pky20052023@gmail.com</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="contact-item">
+                <a href="https://www.linkedin.com/in/pranav-krishna-y-93a910288/" target="_blank"
+                  rel="noopener noreferrer" class="contact-link">
+                  <div class="item-icon" style="background-color: transparent">
+                    <img src="./assets/images/linkedin_3991775.png" width="50" height="50" alt="LinkedIn Logo">
+                  </div>
+                  <div>
+                    <p class="label-lg">LinkedIn</p>
+                    <span class="body-lg">pranav-krishna-y</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="contact-item">
+                <a href="https://github.com/Pranav362k05/" target="_blank" rel="noopener noreferrer"
+                  class="contact-link">
+                  <div class="item-icon" style="background-color: transparent">
+                    <img src="./assets/images/github_919847.png" width="50" height="50" alt="GitHub Logo">
+                  </div>
+                  <div>
+                    <p class="label-lg">GitHub</p>
+                    <span class="body-lg">Pranav362k05</span>
+                  </div>
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+    </article>
+  </main>
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      easing: 'ease-in-out',
+      once: false,
+      mirror: true,
+      offset: 100
+    });
+  </script>
+
+  <!-- 
+    - ionicon
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
