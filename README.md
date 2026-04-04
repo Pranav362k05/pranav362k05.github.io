@@ -44,15 +44,6 @@ The project is structured to keep styles modular and maintainable.
 
 ---
 
-## Future Improvements
-
-- Add backend integration for contact form
-- Improve performance (lazy loading, asset optimization)
-- Rebuild using React
-- Add detailed project case studies
-
----
-
 ## Live
 
 https://pranav362k05.github.io/
